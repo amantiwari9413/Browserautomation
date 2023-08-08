@@ -4,7 +4,16 @@ let cpage;
 //puppeteer ke andhar bhahut se class hote hai ttha uske andhar function hote hai wo function hamesa ek promise return karte hai 
 
 //ye function ek promise return karta hai 
-let browserOpenpromise=puppeteer.launch({headless:false});
+let browserOpenpromise=puppeteer.launch(
+    {headless:false,
+     //this property use to set defult viewprot
+     defaultViewport:null,
+     //this property is use to define the speed of puppeteer 
+      slowMo:200,
+     //this property is use to miximized the browser window or current window
+     args:["--start-maximized"]
+     
+    });
 //chuki promise return karta hai to mai ise .then() handle kar skta hu
 
 browserOpenpromise
